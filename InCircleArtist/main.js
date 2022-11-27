@@ -95,9 +95,9 @@ async function main() {
 
 
   // when I click on the setNum button...
-  $('#setArtistButton').click(function(){
-    setInfo();
-  })
+  // $('#setArtistButton').click(function(){
+  //   setInfo();
+  // })
 
 
   setInterval(function () {
