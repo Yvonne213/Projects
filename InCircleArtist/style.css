@@ -24,7 +24,7 @@
   /* width: 0%;
   height: 100%; */
   text-align: center;
-  margin-top: 100px;
+  margin-top: 250px;
   position: absolute;
   width:880px;
 }
@@ -86,9 +86,9 @@ input[type=text] {
   border-style: none;
   /* border: 1px dashed rgb(255, 0, 0); */
   padding: 20px 10px;
-  margin: 00px 0;
+  margin: 00px;
   width: 600px;
-  height: 330px;
+  height: 180px;
   background: transparent;
   color: rgba(239, 64, 64, 0.805);
 
