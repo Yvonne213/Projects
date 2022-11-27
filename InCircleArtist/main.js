@@ -95,9 +95,9 @@ async function main() {
 
 
   // when I click on the setNum button...
-  // $('#setArtistButton').click(function(){
-  //   setInfo();
-  // })
+  $('#setArtistButton').click(function(){
+    setInfo();
+  })
 
 
   setInterval(function () {
@@ -154,10 +154,6 @@ async function main() {
     console.log(nameAndAddressArray)
     //document.getElementById("currentArtist").innerHTML = "<tr>"+"jjsjsjs"+"</tr>"
     // $('#currentAddress').text(currentAddress)
-
-
-    //---------------P5.JS----------------------------------//
-    // pretend this is where setup() starts
   }
 
 
@@ -175,8 +171,6 @@ async function main() {
       contractWithSigner.safeMint(addressToSet, nameToSet);
     }
   }
-
-
 }
 
 // EVENT LISTENERS
