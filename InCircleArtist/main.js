@@ -94,7 +94,7 @@ async function main() {
 
 
 
-  // when I click on the setNum button...
+  // demo:when I click on the setNum button...
   // $('#setArtistButton').click(function(){
   //   setInfo();
   // })
