@@ -179,8 +179,19 @@ async function main() {
     if(tokenBalance < 1) {
       sorry.style.display = "block";
     } else {
-      windows.open("https://yvonne213.github.io/Projects/InCircleArtist/check","width=900px, height=260px")
+      window.open("https://yvonne213.github.io/Projects/InCircleArtist/check","width=900px, height=260px")
       VIP.textContent = "VIP: " + connectedWalletAddress;
+    }
+  }
+
+   setArtistButton.onclick = async function() {
+    let tokenBalance = await contract.balanceOf(connectedWalletAddress);
+    console.log(+tokenBalance);
+    tokenBalance = +tokenBalance;
+    if(tokenBalance < 1) {
+      nonono.style.display = "block";
+    } else {
+      welcome.style.display = "block";
     }
   }
 }

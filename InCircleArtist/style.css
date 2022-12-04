@@ -142,6 +142,24 @@ input:focus {
 #sorry {
   display: none;
   text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  color: red;
+}
+#welcome {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  color: red;
+}
+
+#nonono {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  color: red;
 }
 
 @keyframes spin {
