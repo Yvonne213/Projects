@@ -179,7 +179,7 @@ async function main() {
     if (tokenBalance < 1) {
       sorry.style.display = "block";
     } else {
-      window.open("https://yvonne213.github.io/Projects/InCircleArtist/check", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=400,left=500,width=900, height=260")
+      window.open("https://yvonne213.github.io/Projects/InCircleArtist/check", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=400,left=500,width=900, height=350")
       VIP.textContent = "VIP: " + connectedWalletAddress;
     }
   }
