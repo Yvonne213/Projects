@@ -186,18 +186,20 @@ input:focus {
 
 
 #artistmode h1 {
+ 
   font-size: 4rem;
   text-align: center;
   text-shadow: 
-  3px 3px 3px rgb(254, 155, 155),
+   3px 3px 3px rgb(254, 155, 155),
   6px 6px 6px red,
-    9px 9px 9px rgb(148, 3, 3)
+   9px 9px 9px rgb(148, 3, 3)
 }
 
 #artistmode h2 {
+ 
   font-size: 2rem;
   text-align: center;
-  text-shadow: 2px 2px red
+  text-shadow: 0 2px 2px red
 }
 
 .bg {
@@ -214,11 +216,11 @@ input:focus {
   animation: colorchange 3s infinite linear;
 }
 
-#artistmode button{
-  margin-top: 30px;
+#artistmode button {
+  margin-top: 0px;
   font-size: 1em;
   background-color: rgb(250, 227, 227); 
-  color: black; 
+  color: rgb(234, 0, 0); 
   border: 2px solid #ffffff;
   height:200px;
   width:200px;
@@ -229,4 +231,29 @@ input:focus {
   color: black; 
   border: 2px solid #f44336;
   box-shadow: 0 12px 16px 0 rgba(153, 1, 1, 0.24),0 17px 50px 0 rgba(255, 87, 87, 0.19);
+}
+
+#manifesto button{
+  margin-top: 0px;
+  font-size: 1em;
+  background-color: rgb(250, 227, 227); 
+  color: rgb(234, 0, 0); 
+  border: 2px solid #ffffff;
+  height:200px;
+  width:200px;
+  border-radius: 50%;
+}
+
+#manifesto button:hover{
+  background-color: rgb(255, 174, 174); 
+  color: black; 
+  border: 2px solid #f44336;
+  box-shadow: 0 12px 16px 0 rgba(153, 1, 1, 0.24),0 17px 50px 0 rgba(255, 87, 87, 0.19);
+}
+
+#manifesto {
+  font-family: Arial;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.5rem;
 }
