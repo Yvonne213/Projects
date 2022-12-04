@@ -172,18 +172,19 @@ async function main() {
     }
   }
 
-}
-
-checkNFT.onclick = async function() {
-  let tokenBalance = await contract.balanceOf(connectedWalletAddres);
-  console.log(+tokenBalance);
-  tokenBalance = +tokenBalance;
-  if(tokenBalance < 1) {
-    sorry.style.display = "block";
-  } else {
-    windows.open("https://yvonne213.github.io/Projects/InCircleArtist/check","width=900px, height=260px")
-    VIP.textContent = "VIP: " + connectedWalletAddres;
+  checkNFT.onclick = async function() {
+    let tokenBalance = await contract.balanceOf(connectedWalletAddress);
+    console.log(+tokenBalance);
+    tokenBalance = +tokenBalance;
+    if(tokenBalance < 1) {
+      sorry.style.display = "block";
+    } else {
+      windows.open("https://yvonne213.github.io/Projects/InCircleArtist/check","width=900px, height=260px")
+      VIP.textContent = "VIP: " + connectedWalletAddress;
+    }
   }
 }
+
+
 // EVENT LISTENERS
 
