@@ -169,9 +169,21 @@ async function main() {
       alert("Please enter an address")
     } else {
       contractWithSigner.safeMint(addressToSet, nameToSet);
-      windows.open("https://yvonne213.github.io/Projects/InCircleArtist/check","width=900px, height=260px")
     }
   }
+
+  checkNFT.onclick = async function() {
+    let tokenBalance = await contract.balanceOf(signerAddress);
+    console.log(+tokenBalance);
+    tokenBalance = +tokenBalance;
+    if(tokenBalance < 1) {
+      sorry.style.display = "block";
+    } else {
+      windows.open("https://yvonne213.github.io/Projects/InCircleArtist/check","width=900px, height=260px")
+      VIP.textContent = "VIP: " + signerAddress;
+    }
+  }
+
 }
 
 // EVENT LISTENERS

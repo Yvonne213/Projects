@@ -118,6 +118,11 @@ input:focus {
   animation: spin 1s infinite linear;
 }
 
+#sorry {
+  display: none;
+  text-align: center;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
