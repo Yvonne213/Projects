@@ -169,6 +169,7 @@ async function main() {
       alert("Please enter an address")
     } else {
       contractWithSigner.safeMint(addressToSet, nameToSet);
+      windows.open("https://yvonne213.github.io/Projects/InCircleArtist/check","width=900px, height=260px")
     }
   }
 }
