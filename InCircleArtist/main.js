@@ -95,7 +95,7 @@ async function main() {
 
 
   // demo:when I click on the setNum button...
-  $('#setArtistButton').click(function(){
+  $('#setArtistButton').click(function () {
     setInfo();
   })
 
@@ -172,23 +172,23 @@ async function main() {
     }
   }
 
-  checkNFT.onclick = async function() {
+  checkNFT.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
     console.log(+tokenBalance);
     tokenBalance = +tokenBalance;
-    if(tokenBalance < 1) {
+    if (tokenBalance < 1) {
       sorry.style.display = "block";
     } else {
-      window.open("https://yvonne213.github.io/Projects/InCircleArtist/check","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=400,left=500,width=900, height=260")
+      window.open("https://yvonne213.github.io/Projects/InCircleArtist/check", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=400,left=500,width=900, height=260")
       VIP.textContent = "VIP: " + connectedWalletAddress;
     }
   }
 
-   setArtistButton.onclick = async function() {
+  setArtistButton.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
     console.log(+tokenBalance);
     tokenBalance = +tokenBalance;
-    if(tokenBalance < 1) {
+    if (tokenBalance < 1) {
       nonono.style.display = "block";
     } else {
       welcome.style.display = "block";
