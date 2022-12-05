@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+#paper{
+  position: absolute;
+  right:50px;
+  font-size: 15px;
+  
+}
+
 .button-container {
   display: flex;
   flex-wrap: wrap;
