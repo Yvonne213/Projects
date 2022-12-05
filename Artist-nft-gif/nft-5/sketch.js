@@ -5,7 +5,7 @@ var xoff1 = 0
 var xoff2 = 10000
 let p5Canvas;
 let chasingPoint;
-let easing = 0.02;
+let easing = 0.08;
 
 
 P5Capture.setDefaultOptions({
@@ -22,14 +22,13 @@ function setup() {
 }
 
 function draw() {
-  // if (frameCount === 1) {
-  //   const capture = P5Capture.getInstance();
-  //   capture.start({
-  //     format: "gif",
-
-  //     duration: 300,
-  //   });
-  // }
+  if (frameCount === 1) {
+    const capture = P5Capture.getInstance();
+    capture.start({
+      format: "gif",
+      duration: 300,
+    });
+  }
 
   background(255);
   push();
@@ -46,8 +45,7 @@ function draw() {
     let x = r * cos(a)
     let y = r * sin(a)
 
-    vertex(x-50, y)
-    vertex(x+70, y)
+    // vertex(x-50, y)
 
 
     let targetPoint = createVector(x, y)
@@ -55,9 +53,16 @@ function draw() {
     chasingPoint = p5.Vector.lerp(chasingPoint, targetPoint, easing)
 
     push();
-    translate(chasingPoint.x+70, chasingPoint.y);
+    translate(chasingPoint.x, chasingPoint.y);
     rotate(angle)
-   point(0+100, 0+20);
+ 
+ 
+    point(0, -10);
+   point(0, 0+20);
+   point(0, 0+50);
+   point(0, 0+80);
+   point(0, 0+110);
+   point(0, 0+140);
     fill("#FFC107")
     strokeWeight(3)
     pop();
@@ -83,9 +88,9 @@ function draw() {
   textAlign(CENTER, CENTER);
   push();
   textSize(35);
-  text('The person who is', width / 2, height / 2.7 + 50);
-  text('known to the public online ', width / 2, height / 2.3 + 50);
-  text('and offline is an artist.', width / 2, height / 2.0 + 50);
+  text('The person who does', width / 2, height / 2.7 + 50);
+  text('not care about being', width / 2, height / 2.3 + 50);
+  text('an artist is an artist.', width / 2, height / 2.0 + 50);
   textSize(20);
   textStyle(ITALIC);
   text('--Artist Manifesto', width / 2, height / 1.8 + 50);
