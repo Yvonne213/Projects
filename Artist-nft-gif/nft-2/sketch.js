@@ -23,14 +23,14 @@ function setup() {
 
 function draw() {
   // create gif ---------
-  // if (frameCount ===1) {
-  //   const capture = P5Capture.getInstance();
-  //   capture.start({
-  //     format: "gif",
+  if (frameCount ===1) {
+    const capture = P5Capture.getInstance();
+    capture.start({
+      format: "gif",
 
-  //     duration: 300,
-  //   });
-  // }
+      duration: 300,
+    });
+  }
   // created gif ---------
 
   background(255);
@@ -86,8 +86,8 @@ function draw() {
   textAlign(CENTER, CENTER);
   push();
   textSize(45);
-  text('The person whose lives', width / 2, height / 2.5 + 50);
-  text('do not repeat is an artist.', width / 2, height / 2.1 + 50);
+  text('The person whose life', width / 2, height / 2.5 + 50);
+  text('does not repeat is an artist.', width / 2, height / 2.1 + 50);
   textSize(20);
   textStyle(ITALIC);
   text('--Artist Manifesto', width / 2, height / 1.8 + 50);

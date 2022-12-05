@@ -23,14 +23,14 @@ function setup() {
 
 function draw() {
   // create gif ---------
-  // if (frameCount ===1) {
-  //   const capture = P5Capture.getInstance();
-  //   capture.start({
-  //     format: "gif",
+  if (frameCount ===1) {
+    const capture = P5Capture.getInstance();
+    capture.start({
+      format: "gif",
     
-  //     duration: 300,
-  //   });
-  // }
+      duration: 300,
+    });
+  }
  // created gif ---------
 
   background(255);
@@ -125,8 +125,8 @@ pop();
 textAlign(CENTER, CENTER);
 push();
 textSize(45);
-text('The person who has names', width/2, height/2.5+40);
-text('and surnames is an artist.', width/2, height/2.1+40);
+text('The person who can', width/2, height/2.5+40);
+text('identify artists is an artist.', width/2, height/2.1+40);
 textSize(20);
 textStyle(ITALIC);
 text('--Artist Manifesto', width/2, height/1.8+40);
