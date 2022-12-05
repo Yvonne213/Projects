@@ -4,18 +4,18 @@
   box-sizing: border-box;
 }
 
-
-#paper{
+.label{
   position: absolute;
   right:50px;
   font-size: 15px;
   margin-top: -10px;
+  text-align: right;
 }
 
 .hide {
   display: none;
-  top:5px;
-  right:170px;
+  top:70px;
+  right:10px;
   position: absolute;
 }
 
