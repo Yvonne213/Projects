@@ -72,8 +72,8 @@ body {
   padding: 0.5em;
   font-size: 5px;
   width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  height: 30px;
+  /* border-radius: 50%; */
   background-color: rgb(254, 223, 223);
   border: 2px solid #fccdcd;
 }
