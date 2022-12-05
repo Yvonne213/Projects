@@ -40,95 +40,51 @@ function draw() {
   for (let a = 0; a < TWO_PI; a += 0.01) {
     let xoff = map(cos(a), -1, 1, 0, noiseMax)
     let yoff = map(sin(a), -1, 1, 0, noiseMax)
-    let r = map(noise(xoff, yoff, zoff), 0, 1, width / 3, width / 2.5)
+    let r = map(noise(xoff, yoff, zoff), 0, 1, width / 4.5, width / 4)
 
     let x = r * cos(a)
     let y = r * sin(a)
 
     // vertex(x-50, y)
-
+vertex(x,y)
 
     let targetPoint = createVector(x, y)
     let angle = atan2(targetPoint.y - chasingPoint.y, targetPoint.x - chasingPoint.x)
     chasingPoint = p5.Vector.lerp(chasingPoint, targetPoint, easing)
-    fill("#FFC107")
+    fill(255,0,0,50)
 
+  let c=10;
     push();
-    translate(chasingPoint.x, chasingPoint.y-250);
+    translate(chasingPoint.x, chasingPoint.y-500);
     rotate(angle)
-   point(0, 0+110);
+   point(0, 0+c);
     strokeWeight(3)
     pop();
 
     push();
-    translate(chasingPoint.x-50, chasingPoint.y-200);
+    translate(chasingPoint.x, chasingPoint.y+500);
     rotate(angle)
-   point(0, 0+110);
+   point(0, 0+c);
     strokeWeight(3)
     pop();
 
     push();
-    translate(chasingPoint.x-100, chasingPoint.y-150);
+    translate(chasingPoint.x+500, chasingPoint.y);
     rotate(angle)
-   point(0, 0+110);
-    strokeWeight(3)
-    pop();
-
-    push();
-    translate(chasingPoint.x-100, chasingPoint.y-100);
-    rotate(angle)
-   point(0, 0+110);
-    strokeWeight(3)
-    pop();
-
-    push();
-    translate(chasingPoint.x, chasingPoint.y);
-    rotate(angle)
-   point(0, 0+110);
-    strokeWeight(3)
-    pop();
-
-    push();
-    translate(chasingPoint.x+50, chasingPoint.y+50);
-    rotate(angle)
-   point(0, 0+110);
+   point(0, 0+c);
     strokeWeight(3)
     pop();
 
 
 
     push();
-    translate(chasingPoint.x-50, chasingPoint.y-50);
+    translate(chasingPoint.x-500, chasingPoint.y);
     rotate(angle)
-   point(0, 0+110);
+   point(0, 0+c);
     strokeWeight(3)
     pop();
 
-    push();
-    translate(chasingPoint.x+100, chasingPoint.y+100);
-    rotate(angle)
-   point(0, 0+110);
-    strokeWeight(3)
-    pop();
-
-    push();
-    translate(chasingPoint.x+150, chasingPoint.y+150);
-    rotate(angle)
-   point(0, 0+110);
-    strokeWeight(3)
-    pop();
-    push();
-    translate(chasingPoint.x+150, chasingPoint.y+200);
-    rotate(angle)
-   point(0, 0+110);
-    strokeWeight(3)
-    pop();
-    push();
-    translate(chasingPoint.x+100, chasingPoint.y+250);
-    rotate(angle)
-   point(0, 0+110);
-    strokeWeight(3)
-    pop();
+    
 
   }
   endShape(CLOSE)
@@ -139,7 +95,7 @@ function draw() {
   if (mouseIsPressed === true) {
     noiseMax = 10
   } else {
-    noiseMax = 4
+    noiseMax = 10
   }
 
   push();
@@ -148,17 +104,17 @@ function draw() {
   text('Welcome to the circle!', width / 2, 920);
 
   pop();
-let a=0;
+let a=150;
 let b=0;
   textAlign(CENTER, CENTER);
   push();
   textSize(45);
-  text('The person who is humble', width / 2+b, height / 2.7 + a);
-  text('but not accept other’s', width / 2+b, height / 2.3 + a);
-  text('ideas is an artist.', width / 2+b, height / 2.0 + a);
+  text('The person who cannot lie is an artist', width / 2+b, height / 2.7 + a);
+  // text('but not accept other’s', width / 2+b, height / 2.3 + a);
+  // text('ideas is an artist.', width / 2+b, height / 2.0 + a);
   textSize(20);
   textStyle(ITALIC);
-  text('--Artist Manifesto', width / 2+b, height / 1.8 + a);
+  text('--Artist Manifesto', width / 2+b, height / 1.8 + 50);
   fill(0, 0, 0);
   pop();
 
