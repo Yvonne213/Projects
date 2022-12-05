@@ -5,7 +5,7 @@ var xoff1 = 0
 var xoff2 = 10000
 let p5Canvas;
 let chasingPoint;
-let easing = 0.08;
+let easing = 0.02;
 
 
 P5Capture.setDefaultOptions({
@@ -56,13 +56,18 @@ function draw() {
     translate(chasingPoint.x, chasingPoint.y);
     rotate(angle)
  
- 
+    point(0, -40);
     point(0, -10);
    point(0, 0+20);
    point(0, 0+50);
    point(0, 0+80);
    point(0, 0+110);
    point(0, 0+140);
+  //  point(0, 0+170);
+  //  point(0, 0+200);
+  //  point(0, 0+230);
+  //  point(0, 0+260);
+  //  point(0, 0+290);
     fill("#FFC107")
     strokeWeight(3)
     pop();
@@ -87,7 +92,7 @@ function draw() {
 
   textAlign(CENTER, CENTER);
   push();
-  textSize(35);
+  textSize(45);
   text('The person who does', width / 2, height / 2.7 + 50);
   text('not care about being', width / 2, height / 2.3 + 50);
   text('an artist is an artist.', width / 2, height / 2.0 + 50);
