@@ -267,7 +267,7 @@ input:focus {
 }
 
 #inCircleClub {
-  display: block;
+  display: none;
   position: fixed;
   left: 200;
   top: 500;

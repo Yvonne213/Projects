@@ -183,7 +183,7 @@ async function main() {
       sorry.style.display = "block";
     } else {
       inCircleClub.style.display = "block";
-      VIP.textContent = "VIP: " + connectedWalletAddress;
+      VIP.textContent = connectedWalletAddress;
     }
   }
 
