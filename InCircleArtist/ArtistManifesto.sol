@@ -40,7 +40,7 @@
 // }
 
 
-
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts@4.8.0/token/ERC721/ERC721.sol";
@@ -51,48 +51,44 @@ import "@openzeppelin/contracts@4.8.0/utils/Counters.sol";
 import "@openzeppelin/contracts@4.8.0/utils/Strings.sol";
 
 contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
-    address public user;
-    string public realname;
-    // string public addr;
     string public autoname = "Anonymous artist";
-    mapping(address => bool) public statusB;
+    mapping(address => bool) public addressToWasInCircle;
     string[] public nameList;
     address[] public addrList;
 
-  
     function nameInput(address _address, string memory _realname) internal {
         require(
-            statusB[msg.sender] == false,
-            "You have already become an in-circle artist"
+            addressToWasInCircle[msg.sender] == false,
+            "You have already been in the circle."
         );
 
         if (bytes(_realname).length == 0) {
-            realname = autoname;
-        } else {
-            realname = _realname;
+            _realname = autoname;
         }
 
-        user = _address;
-        statusB[msg.sender] = true;
+        addressToWasInCircle[msg.sender] = true;
         nameList.push(_realname);
         addrList.push(_address);
-
     }
 
-    function getName() public view returns (string[] memory) {
+    function getNames() public view returns (string[] memory) {
         return nameList;
     }
 
-    function getAddress() public view returns (address[] memory) {
+    function getAddresses() public view returns (address[] memory) {
         return addrList;
     }
 
+    function getCurrentInCircleArtist()
+        public
+        view
+        returns (string memory, address)
+    {
+        return (nameList[nameList.length - 1], addrList[addrList.length - 1]);
+    }
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdCounter;
-
-
-    event MintEvent(string name, address wallet);
 
     constructor() ERC721("ArtistManifesto", "Artist") {}
 
@@ -112,8 +108,6 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         // concatenate the tokenId of the current minted token to the baseURI.
         string memory uri = string.concat(Strings.toString(tokenId), ".json");
         _setTokenURI(tokenId, uri);
-
-        emit MintEvent(realname,user);
     }
 
     // The following functions are overrides required by Solidity.
@@ -134,3 +128,4 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         return super.tokenURI(tokenId);
     }
 }
+

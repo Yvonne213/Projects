@@ -1,6 +1,6 @@
 // change this each time you deploy a new contract
 // var contractAddress = "0xef34b0d6f13a01Faf1C681E92f98B1511f9e2Bd1";
-var contractAddress = "0x875B6a72aBf275d516E244665A359A9D6eC64BdE";
+var contractAddress = "0x5C71083e0AEbcD4Ac4De5e33678354E9aa38B1Dc";
 var contractABI = [
 	{
 		"inputs": [],
@@ -74,25 +74,6 @@ var contractABI = [
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "wallet",
-				"type": "address"
-			}
-		],
-		"name": "MintEvent",
-		"type": "event"
 	},
 	{
 		"anonymous": false,
@@ -271,6 +252,25 @@ var contractABI = [
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "addressToWasInCircle",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
@@ -321,7 +321,7 @@ var contractABI = [
 	},
 	{
 		"inputs": [],
-		"name": "getAddress",
+		"name": "getAddresses",
 		"outputs": [
 			{
 				"internalType": "address[]",
@@ -353,7 +353,25 @@ var contractABI = [
 	},
 	{
 		"inputs": [],
-		"name": "getName",
+		"name": "getCurrentInCircleArtist",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getNames",
 		"outputs": [
 			{
 				"internalType": "string[]",
@@ -453,38 +471,6 @@ var contractABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "realname",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "statusB",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "bytes4",
@@ -530,19 +516,6 @@ var contractABI = [
 				"internalType": "string",
 				"name": "",
 				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "user",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
 			}
 		],
 		"stateMutability": "view",
