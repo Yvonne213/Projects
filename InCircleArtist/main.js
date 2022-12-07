@@ -113,7 +113,7 @@ async function main() {
     // grab the number from the contract
     const namesList = await contract.getName();
     const addressList = await contract.getAddress();
-    const currentInCircleArtist = await contract.getCurrentInCircleArtist(); 
+    const currentInCircleArtist = await contract.getCurrentInCircleArtist();
 
     console.log(namesList)
     console.log(addressList)
@@ -189,31 +189,30 @@ async function main() {
     }
   }
 
+
+  //windows-size 
   expand.onclick = expandWindow;
   let expanded = false;
 
   function expandWindow() {
 
-
-if(expanded) {
-  // shrink down
-  inCircleClub.style.width = "900px";
-  inCircleClub.style.height = "360px";
-  inCircleClub.style.left = "500px";
-  inCircleClub.style.top = "200px";
-  expanded = false;
-} else {
-  // expand
-  inCircleClub.style.width = "100%";
-  inCircleClub.style.height = "100%";
-  inCircleClub.style.left = "0";
-  inCircleClub.style.top = "0";
-  expanded = true;
-}
-
-    
+    if (expanded) {
+      // shrink down
+      inCircleClub.style.width = "900px";
+      inCircleClub.style.height = "360px";
+      inCircleClub.style.left = "500px";
+      inCircleClub.style.top = "200px";
+      expanded = false;
+    } else {
+      // expand
+      inCircleClub.style.width = "100%";
+      inCircleClub.style.height = "100%";
+      inCircleClub.style.left = "0";
+      inCircleClub.style.top = "0";
+      expanded = true;
+    }
   }
-  
+
 
   setArtistButton.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
