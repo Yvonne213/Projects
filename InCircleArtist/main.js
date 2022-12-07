@@ -2,7 +2,7 @@
   true: automatically connect to Web3 Provider on page load.
   false: enable "click to connect" button
 */
-const CONNECT_AUTOMATICALLY = false;
+const CONNECT_AUTOMATICALLY = true;
 
 if (CONNECT_AUTOMATICALLY) {
   main();
@@ -111,14 +111,16 @@ async function main() {
   async function getUserInfo() {
 
     // grab the number from the contract
-    const currentName = await contract.getName();
-    const currentAddress = await contract.getAddress();
+    const namesList = await contract.getName();
+    const addressList = await contract.getAddress();
+    const currentInCircleArtist = await contract.getCurrentInCircleArtist(); 
 
-    console.log(currentName)
-    console.log(currentAddress)
-    // currentName[0],currentName[1]
+    console.log(namesList)
+    console.log(addressList)
+    console.log(currentInCircleArtist);
+    // namesList[0],namesList[1]
 
-    // iterate through currentName and currentAddress, concat all items
+    // iterate through namesList and addressList, concat all items
     var nameAndAddressArray = [];
     var table = document.createElement("table");
 
@@ -129,13 +131,13 @@ async function main() {
     cell1.innerHTML = String("Artist");
     cell2.innerHTML = String("Address");
 
-    for (var i = 0; i < currentName.length; i++) {
+    for (var i = 0; i < namesList.length; i++) {
 
       var row = table.insertRow(1);
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
-      cell1.innerHTML = String(currentName[i]);
-      cell2.innerHTML = String(currentAddress[i]);
+      cell1.innerHTML = String(namesList[i]);
+      cell2.innerHTML = String(addressList[i]);
 
     }
     document.getElementById("currentArtist").innerHTML = "";
@@ -153,7 +155,7 @@ async function main() {
 
     console.log(nameAndAddressArray)
     //document.getElementById("currentArtist").innerHTML = "<tr>"+"jjsjsjs"+"</tr>"
-    // $('#currentAddress').text(currentAddress)
+    // $('#addressList').text(addressList)
   }
 
 
@@ -180,10 +182,39 @@ async function main() {
     if (tokenBalance < 1) {
       sorry.style.display = "block";
     } else {
-      window.open("https://yvonne213.github.io/Projects/InCircleArtist/check", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=500,width=900, height=350")
+      // window.open("https://yvonne213.github.io/Projects/InCircleArtist/check", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=500,width=900, height=350")
+      inCircleClub.style.display = "block";
+      console.log("hello")
       VIP.textContent = "VIP: " + connectedWalletAddress;
     }
   }
+
+  expand.onclick = expandWindow;
+
+  let expanded = false;
+
+  function expandWindow() {
+
+
+if(expanded) {
+  // shrink down
+  inCircleClub.style.width = "100%";
+  inCircleClub.style.height = "100%";
+  inCircleClub.style.left = "0";
+  inCircleClub.style.top = "0";
+  expanded = false;
+} else {
+  // expand
+  inCircleClub.style.width = "100%";
+  inCircleClub.style.height = "100%";
+  inCircleClub.style.left = "0";
+  inCircleClub.style.top = "0";
+  expanded = true;
+}
+
+    
+  }
+  
 
   setArtistButton.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
