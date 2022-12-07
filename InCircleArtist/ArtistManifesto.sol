@@ -41,6 +41,7 @@
 
 
 // SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts@4.8.0/token/ERC721/ERC721.sol";
@@ -108,6 +109,8 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         // concatenate the tokenId of the current minted token to the baseURI.
         string memory uri = string.concat(Strings.toString(tokenId), ".json");
         _setTokenURI(tokenId, uri);
+
+        // emit mint event
     }
 
     // The following functions are overrides required by Solidity.
@@ -128,4 +131,5 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         return super.tokenURI(tokenId);
     }
 }
+
 

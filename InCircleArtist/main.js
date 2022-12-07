@@ -88,6 +88,7 @@ async function main() {
   const connectedWalletAddress = await signer.getAddress();
   connectedWallet.textContent = connectedWalletAddress;
   console.log(`Connected Wallet: ${connectedWalletAddress}`);
+  
 
   // hide the loading icon
   loadingIconConnect.style.display = "none";
@@ -105,19 +106,15 @@ async function main() {
   }, 2000)
 
 
-  // FUNCTIONS
-
   // CHANGING THE BLOCKCHAIN
   async function getUserInfo() {
-
     // grab the number from the contract
-    const namesList = await contract.getName();
-    const addressList = await contract.getAddress();
-    const currentInCircleArtist = await contract.getCurrentInCircleArtist();
-
-    console.log(namesList)
-    console.log(addressList)
-    console.log(currentInCircleArtist);
+    const namesList = await contract.getNames();
+    const addressList = await contract.getAddresses();
+  
+    // console.log(namesList)
+    // console.log(addressList)
+    // console.log(currentInCircleArtist);
     // namesList[0],namesList[1]
 
     // iterate through namesList and addressList, concat all items
@@ -153,7 +150,7 @@ async function main() {
     // cell2.innerHTML = "Address";
     // document.getElementById("currentArtist").appendChild(table);
 
-    console.log(nameAndAddressArray)
+    // console.log(nameAndAddressArray)
     //document.getElementById("currentArtist").innerHTML = "<tr>"+"jjsjsjs"+"</tr>"
     // $('#addressList').text(addressList)
   }
@@ -173,6 +170,7 @@ async function main() {
     } else {
       contractWithSigner.safeMint(addressToSet, nameToSet);
     }
+    currentArtistName = nameToSet
   }
 
   checkNFT.onclick = async function () {
@@ -183,7 +181,9 @@ async function main() {
       sorry.style.display = "block";
     } else {
       inCircleClub.style.display = "block";
-      VIP.textContent = connectedWalletAddress;
+      const currentArtistName = await contract.getCurrentInCircleArtist();
+      console.log(currentArtistName[0]);
+      VIP.textContent = currentArtistName[0] + " " + connectedWalletAddress;
     }
   }
 
@@ -209,14 +209,12 @@ async function main() {
     }
   }
 
-//alert,hints
+  //alert,hints
   setArtistButton.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
     console.log(+tokenBalance);
     tokenBalance = +tokenBalance;
-    if (tokenBalance < 1) {
-      nonono.style.display = "block";
-    } else {
+    if (tokenBalance > 0) {
       welcome.style.display = "block";
     }
   }
