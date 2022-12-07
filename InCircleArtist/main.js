@@ -182,20 +182,16 @@ async function main() {
     if (tokenBalance < 1) {
       sorry.style.display = "block";
     } else {
-      // window.open("https://yvonne213.github.io/Projects/InCircleArtist/check", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=500,width=900, height=350")
       inCircleClub.style.display = "block";
-      console.log("hello")
       VIP.textContent = "VIP: " + connectedWalletAddress;
     }
   }
 
 
-  //windows-size 
+  //pop-ups windows-size 
   expand.onclick = expandWindow;
   let expanded = false;
-
   function expandWindow() {
-
     if (expanded) {
       // shrink down
       inCircleClub.style.width = "900px";
@@ -213,7 +209,7 @@ async function main() {
     }
   }
 
-
+//alert,hints
   setArtistButton.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
     console.log(+tokenBalance);

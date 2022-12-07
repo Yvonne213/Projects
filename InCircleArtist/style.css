@@ -275,9 +275,6 @@ input:focus {
   height: 340px;
 }
 
-.bg {
-
-}
 
 #inCircleClubContent {
   position: relative;
@@ -287,11 +284,10 @@ input:focus {
   /* position: fixed; */
   background-color: hsl(0, 94%, 75%);
   background-image: linear-gradient(to bottom right, rgb(252, 142, 142), rgba(255, 225, 0, 0.425));
-  /* filter: hue-rotate(0deg); */
   
   border: 5px solid rgba(255, 0, 0, 0.462);
   box-shadow:0 12px 20px 0 rgba(213, 0, 0, 0.24), 0 17px 50px 0 rgba(255, 16, 16, 0.19);
-  resize: both;
+  /* resize: both; */
   overflow: auto;
 }
 
