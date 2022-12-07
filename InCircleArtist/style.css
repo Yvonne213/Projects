@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-.label{
+.label {
   position: absolute;
-  right:50px;
+  right: 50px;
   font-size: 15px;
   margin-top: -10px;
   text-align: right;
@@ -14,12 +14,12 @@
 
 .hide {
   display: none;
-  top:100px;
-  right:10px;
+  top: 100px;
+  right: 10px;
   position: absolute;
 }
 
-#paper:hover + .hide {
+#paper:hover+.hide {
   display: block;
   color: rgba(0, 0, 0, 0.253);
 }

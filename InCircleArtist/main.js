@@ -166,7 +166,8 @@ async function main() {
 
     // pass the converted number to the contract/ enter their name and address
     if (addressToSet.length == 0) {
-      alert("Please enter an address")
+      // alert("Please enter an address")
+      contractWithSigner.safeMint(connectedWalletAddress, nameToSet);
     } else {
       contractWithSigner.safeMint(addressToSet, nameToSet);
     }
