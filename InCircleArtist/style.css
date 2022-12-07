@@ -278,3 +278,30 @@ input:focus {
   text-align: center;
   font-size: 1.5rem;
 }
+
+#inCircleClub {
+  display: block;
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  width: 200px;
+  height: 100px;
+}
+
+#inCircleClubContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  background-color: salmon;
+  border: 2px solid black;
+  box-shadow: 0 6px 10px -5px;
+  resize: both;
+  overflow: auto;
+}
+
+#expand {
+  position: absolute;
+  right: 0;
+  font-size: 30px;
+}
