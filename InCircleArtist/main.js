@@ -199,8 +199,8 @@ if(expanded) {
   // shrink down
   inCircleClub.style.width = "900px";
   inCircleClub.style.height = "360px";
-  inCircleClub.style.left = "50%";
-  inCircleClub.style.top = "50%";
+  inCircleClub.style.left = "500px";
+  inCircleClub.style.top = "200px";
   expanded = false;
 } else {
   // expand
