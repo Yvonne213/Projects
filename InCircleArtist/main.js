@@ -211,9 +211,7 @@ async function main() {
       if (tokenBalance > 0) {
         checkNFTButton.style.display = 'block';
         welcome.style.display = "block";
-      } else {
-        
-      }
+      } 
     }
 
   // EVENT LISTENERS
