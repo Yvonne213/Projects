@@ -173,7 +173,7 @@ async function main() {
     currentArtistName = nameToSet
   }
 
-  checkNFT.onclick = async function () {
+  checkNFTButton.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
     console.log(+tokenBalance);
     tokenBalance = +tokenBalance;
@@ -222,4 +222,8 @@ async function main() {
 
 
 // EVENT LISTENERS
-
+// triggers when the user entered
+contract.on("getInSuccessfully", (artistName,wallet) => {
+  console.log(artistName,wallet);
+  checkNFT.style.display = 'block';
+});

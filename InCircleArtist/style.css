@@ -53,7 +53,7 @@
 #form {
   width: 100%;
   /* height: 30%; */
-  margin-top: 51px;
+  margin-top: 100px;
   position: absolute;
 }
 
@@ -90,34 +90,43 @@ body {
   border: 2px solid #fccdcd;
 }
 
-#layerContainer button {
+#setArtistButton {
   padding: 0.5em;
   font-size: 1em;
   background-color: rgb(230, 228, 228);
   color: rgb(0, 0, 0);
   border: 1px solid #ccb8b8;
   border-radius: 10px;
-
 }
 
-#layerContainer button:hover {
+#setArtistButton:hover {
   background-color: rgb(255, 255, 255);
   color: black;
   border: 2px solid #f44336;
   box-shadow: 0 12px 30px rgba(153, 1, 1, 0.24), 0 17px 30px 0 rgba(255, 87, 87, 0.19);
 }
 
-/*color two circle*/
-/* input{
-  font-size: 2.5rem;
-  border-radius: 1000px;
-  border: 1px dashed rgb(255, 0, 0);
-  padding: 20px 60px;
-  margin: 00px 0;
-  width: 398px;
-  height: 398px;
-  background: transparent;
-} */
+#checkNFTButton{
+ display: block;
+ margin-top: 15px;
+ position: absolute;
+ left: 50%;
+ -ms-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ padding: 0.5em;
+  font-size: 1em;
+  background-color: rgb(230, 228, 228);
+  color: rgb(0, 0, 0);
+  border: 1px solid #ccb8b8;
+  border-radius: 10px;
+}
+
+#checkNFTButton:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 2px solid #f44336;
+  box-shadow: 0 12px 30px rgba(153, 1, 1, 0.24), 0 17px 30px 0 rgba(255, 87, 87, 0.19);
+}
 
 input[type=text] {
   text-align: center;
@@ -275,7 +284,7 @@ input:focus {
 }
 
 #inCircleClub {
-  display: block;
+  display: none;
   position: fixed;
   left: 200;
   top: 500;

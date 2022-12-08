@@ -42,6 +42,8 @@
 
 // SPDX-License-Identifier: MIT
 // SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts@4.8.0/token/ERC721/ERC721.sol";
@@ -56,6 +58,11 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
     mapping(address => bool) public addressToWasInCircle;
     string[] public nameList;
     address[] public addrList;
+    // string public artist;
+    // address public user;
+
+
+ event getInSuccessfully(string artistName , address wallet);
 
     function nameInput(address _address, string memory _realname) internal {
         require(
@@ -110,7 +117,7 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         string memory uri = string.concat(Strings.toString(tokenId), ".json");
         _setTokenURI(tokenId, uri);
 
-        // emit mint event
+        emit getInSuccessfully(_realname,_user);
     }
 
     // The following functions are overrides required by Solidity.
@@ -131,5 +138,3 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         return super.tokenURI(tokenId);
     }
 }
-
-
