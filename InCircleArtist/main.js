@@ -204,17 +204,15 @@ async function main() {
     }
   }
 
-
   setArtistButton.onclick = async function () {
-    let tokenBalance = await contract.balanceOf(connectedWalletAddress);
-    console.log(+tokenBalance);
-    tokenBalance = +tokenBalance;
-    if (tokenBalance > 0) {
-      checkNFTButton.style.display = 'block';
-      welcome.style.display = "block";
+      let tokenBalance = await contract.balanceOf(connectedWalletAddress);
+      console.log(+tokenBalance);
+      tokenBalance = +tokenBalance;
+      if (tokenBalance > 0) {
+        checkNFTButton.style.display = 'block';
+        welcome.style.display = "block";
+      }
     }
-  }
-}
 
 // EVENT LISTENERS
 // triggers when the user entered
@@ -222,3 +220,9 @@ async function main() {
 //   console.log(artistName);
 //   checkNFTButton.style.display = 'block';
 // });
+
+
+}
+
+
+
