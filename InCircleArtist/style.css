@@ -107,8 +107,7 @@ body {
 }
 
 #checkNFTButton{
- /* display: none; */
- visibility: hidden;
+ display: none;
  margin-top: 15px;
  position: absolute;
  left: 50%;
