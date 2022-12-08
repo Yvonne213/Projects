@@ -202,27 +202,29 @@ async function main() {
       inCircleClub.style.top = "0";
       expanded = true;
     }
-  }
+    }
 
-  // setArtistButton.onclick = async function setArtistButton() {
-  //     var tokenBalance = await contract.balanceOf(connectedWalletAddress);
-  //     console.log(+tokenBalance);
-  //     tokenBalance = +tokenBalance;
-  //     if (tokenBalance > 0) {
-  //       checkNFTButton.style.display = 'block';
-  //       welcome.style.display = "block";
-  //     }
-  //   }
+  setArtistButton.onclick = async function setArtistButton() {
+      var tokenBalance = await contract.balanceOf(connectedWalletAddress);
+      console.log(+tokenBalance);
+      tokenBalance = +tokenBalance;
+      if (tokenBalance > 0) {
+        checkNFTButton.style.display = 'block';
+        welcome.style.display = "block";
+      } else {
+        
+      }
+    }
 
-  
-// EVENT LISTENERS
-// triggers when the user entered
+  // EVENT LISTENERS
+ // triggers when the user entered
 contract.on("getInSuccessfully", (artistName,wallet) => {
   console.log(wallet);
-  checkNFTButton.style.display = 'block';
   welcome.style.display = "block";
-});
+  checkNFTButton.style.display = "block";
+})
 }
+
 
 
 

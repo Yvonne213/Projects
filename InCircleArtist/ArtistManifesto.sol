@@ -58,8 +58,8 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
     mapping(address => bool) public addressToWasInCircle;
     string[] public nameList;
     address[] public addrList;
-    // string public artist;
-    // address public user;
+//     string public artistName;
+// address public wallet;
 
 
  event getInSuccessfully(string artistName , address wallet);
@@ -120,6 +120,7 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         emit getInSuccessfully(_realname,_user);
     }
 
+  
     // The following functions are overrides required by Solidity.
 
     function _burn(uint256 tokenId)
