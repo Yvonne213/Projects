@@ -182,7 +182,8 @@ async function main() {
     } else {
       inCircleClub.style.display = "block";
       const currentArtistName = await contract.getCurrentInCircleArtist();
-      VIP.innerHTML = currentArtistName[0]+"<br>"+connectedWalletAddress;
+      // VIP.innerHTML = currentArtistName[0]+"<br>"+connectedWalletAddress;
+      VIP.innerHTML = connectedWalletAddress;
       console.log(VIP);
     }
   }
@@ -224,6 +225,6 @@ async function main() {
 // EVENT LISTENERS
 // triggers when the user entered
 contract.on("getInSuccessfully", (artistName,wallet) => {
-  console.log(artistName,wallet);
+  console.log(artistName);
   checkNFT.style.display = 'block';
 });
