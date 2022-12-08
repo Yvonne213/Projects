@@ -173,19 +173,13 @@ async function main() {
     currentArtistName = nameToSet
   }
 
-  checkNFTButton.onclick = async function () {
-    let tokenBalance = await contract.balanceOf(connectedWalletAddress);
-    console.log(+tokenBalance);
-    tokenBalance = +tokenBalance;
-    if (tokenBalance < 1) {
-      sorry.style.display = "block";
-    } else {
+  checkNFTButton.onclick = checkNFT;
+  function checkNFT () {
       inCircleClub.style.display = "block";
-      const currentArtistName = await contract.getCurrentInCircleArtist();
+      // const currentArtistName = await contract.getCurrentInCircleArtist();
       // VIP.innerHTML = currentArtistName[0]+"<br>"+connectedWalletAddress;
-      VIP.innerHTML = connectedWalletAddress;
+      VIP.innerHTML = currentArtistName+"<br>"+connectedWalletAddress;
       console.log(VIP);
-    }
   }
 
 
@@ -210,21 +204,21 @@ async function main() {
     }
   }
 
-  //alert,hints
+
   setArtistButton.onclick = async function () {
     let tokenBalance = await contract.balanceOf(connectedWalletAddress);
     console.log(+tokenBalance);
     tokenBalance = +tokenBalance;
     if (tokenBalance > 0) {
+      checkNFTButton.style.display = 'block';
       welcome.style.display = "block";
     }
   }
 }
 
-
 // EVENT LISTENERS
 // triggers when the user entered
-contract.on("getInSuccessfully", (artistName,wallet) => {
-  console.log(artistName);
-  checkNFT.style.display = 'block';
-});
+// contract.on("getInSuccessfully", (artistName,wallet) => {
+//   console.log(artistName);
+//   checkNFTButton.style.display = 'block';
+// });
