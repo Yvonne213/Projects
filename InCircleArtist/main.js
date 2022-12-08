@@ -182,8 +182,8 @@ async function main() {
     } else {
       inCircleClub.style.display = "block";
       const currentArtistName = await contract.getCurrentInCircleArtist();
-      console.log(currentArtistName[0]);
-      VIP.textContent = currentArtistName[0] + " " + connectedWalletAddress;
+      VIP.innerHTML = currentArtistName[0]+"<br>"+connectedWalletAddress;
+      console.log(VIP);
     }
   }
 
