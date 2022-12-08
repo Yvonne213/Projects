@@ -167,13 +167,6 @@ input:focus {
   animation: spin 1s infinite linear;
 }
 
-#sorry {
-  display: none;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 15px;
-  color: red;
-}
 
 #welcome {
   display: none;
