@@ -207,7 +207,7 @@ async function main() {
   setArtistButton.onclick = async function setArtistButton() {
       var tokenBalance = await contract.balanceOf(connectedWalletAddress);
       console.log(+tokenBalance);
-      tokenBalance = +tokenBalance;
+      // tokenBalance = +tokenBalance;
       if (tokenBalance > 0) {
         checkNFTButton.style.display = 'block';
         welcome.style.display = "block";
@@ -216,11 +216,11 @@ async function main() {
 
   // EVENT LISTENERS
  // triggers when the user entered
-contract.on("getInSuccessfully", (artistName,wallet) => {
-  console.log(wallet);
-  welcome.style.display = "block";
-  checkNFTButton.style.display = "block";
-})
+// contract.on("getInSuccessfully", (artistName,wallet) => {
+//   console.log(wallet);
+//   welcome.style.display = "block";
+//   checkNFTButton.style.display = "block";
+// })
 }
 
 
