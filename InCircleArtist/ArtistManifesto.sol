@@ -40,11 +40,7 @@
 // }
 
 
-// SPDX-License-Identifier: MIT
-// SPDX-License-Identifier: MIT
-// SPDX-License-Identifier: MIT
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.17;
 
 import "@openzeppelin/contracts@4.8.0/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts@4.8.0/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -58,8 +54,8 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
     mapping(address => bool) public addressToWasInCircle;
     string[] public nameList;
     address[] public addrList;
-//     string public artistName;
-// address public wallet;
+    // string public artist;
+    // address public user;
 
 
  event getInSuccessfully(string artistName , address wallet);
@@ -120,7 +116,6 @@ contract ArtistManifesto is ERC721, ERC721URIStorage, Ownable {
         emit getInSuccessfully(_realname,_user);
     }
 
-  
     // The following functions are overrides required by Solidity.
 
     function _burn(uint256 tokenId)
