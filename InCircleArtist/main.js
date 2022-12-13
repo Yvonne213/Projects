@@ -88,7 +88,7 @@ async function main() {
   const connectedWalletAddress = await signer.getAddress();
   connectedWallet.textContent = connectedWalletAddress;
   console.log(`Connected Wallet: ${connectedWalletAddress}`);
-  
+
 
   // hide the loading icon
   loadingIconConnect.style.display = "none";
@@ -111,7 +111,7 @@ async function main() {
     // grab the number from the contract
     const namesList = await contract.getNames();
     const addressList = await contract.getAddresses();
-  
+
     // console.log(namesList)
     // console.log(addressList)
     // console.log(currentInCircleArtist);
@@ -174,12 +174,12 @@ async function main() {
   }
 
   checkNFTButton.onclick = checkNFT;
-  function checkNFT () {
-      inCircleClub.style.display = "block";
-      // const currentArtistName = await contract.getCurrentInCircleArtist();
-      // VIP.innerHTML = currentArtistName[0]+"<br>"+connectedWalletAddress;
-      VIP.innerHTML = currentArtistName+"<br>"+connectedWalletAddress;
-      console.log(VIP);
+  function checkNFT() {
+    inCircleClub.style.display = "block";
+    // const currentArtistName = await contract.getCurrentInCircleArtist();
+    // VIP.innerHTML = currentArtistName[0]+"<br>"+connectedWalletAddress;
+    VIP.innerHTML = currentArtistName + "<br>" + connectedWalletAddress;
+    console.log(VIP);
   }
 
 
@@ -202,25 +202,36 @@ async function main() {
       inCircleClub.style.top = "0";
       expanded = true;
     }
-    }
+  }
 
-  setArtistButton.onclick = async function setArtistButton() {
-      var tokenBalance = await contract.balanceOf(connectedWalletAddress);
+
+  window.onload = runCode();
+  async function runCode() {
+    console.log('Page Loaded');
+    var tokenBalance = await contract.balanceOf(connectedWalletAddress);
       console.log(+tokenBalance);
-      // tokenBalance = +tokenBalance;
       if (tokenBalance > 0) {
         checkNFTButton.style.display = 'block';
         welcome.style.display = "block";
       } 
-    }
+  };
 
-  // EVENT LISTENERS
- // triggers when the user entered
-// contract.on("getInSuccessfully", (artistName,wallet) => {
-//   console.log(wallet);
-//   welcome.style.display = "block";
-//   checkNFTButton.style.display = "block";
-// })
+  // setArtistButton.onclick = async function setArtistButton() {
+  //     var tokenBalance = await contract.balanceOf(connectedWalletAddress);
+  //     console.log(+tokenBalance);
+  //     if (tokenBalance > 0) {
+  //       checkNFTButton.style.display = 'block';
+  //       welcome.style.display = "block";
+  //     } 
+  //   }
+
+  //   EVENT LISTENERS
+  //  triggers when the user entered
+  contract.on("getInSuccessfully", (artistName, wallet) => {
+    console.log(wallet);
+    welcome.style.display = "block";
+    checkNFTButton.style.display = "block";
+  })
 }
 
 
