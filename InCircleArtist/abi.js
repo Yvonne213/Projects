@@ -1,6 +1,6 @@
 // change this each time you deploy a new contract
 // var contractAddress = "0xef34b0d6f13a01Faf1C681E92f98B1511f9e2Bd1";
-var contractAddress = "0x52a8968Bc400114b64f80Da7Fb22813f9F4bff96";
+var contractAddress = "0x4fe382fac4f935787bE76012B73670366FDa0aE3";
 var contractABI = [
 	{
 		"inputs": [],
@@ -541,6 +541,7 @@ var contractABI = [
 		"type": "function"
 	}
 ]
+
 
 // paste contract ABI here
 // var contractABI = [
