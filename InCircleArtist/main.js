@@ -55,12 +55,12 @@ async function main() {
 
   // Check if user is signed in to correct network
   const chainId = await provider.getNetwork();
-  if (chainId.chainId != 5) {
-    alert("Please switch to the Goerli Test Network in MetaMask. The page will refresh automatically after switching.");
+  if (chainId.chainId != 80001) {
+    alert("Please switch to the Mumbai in MetaMask. The page will refresh automatically after switching.");
     loadingIconConnect.style.display = "none";
     return;
   }
-  console.log("Connected to Goerli");
+  console.log("Connected to Mumbai");
 
   // AT THIS POINT, THE USER SHOULD BE SUCCESSFULLY CONNECTED TO THE DAPP
 
