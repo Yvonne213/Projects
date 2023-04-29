@@ -148,14 +148,14 @@ function draw() {
   text('Welcome to the circle!', width / 2, 920);
 
   pop();
-let a=0;
+let a=50;
 let b=0;
   textAlign(CENTER, CENTER);
   push();
   textSize(45);
   text('The person who is humble', width / 2+b, height / 2.7 + a);
-  text('but not accept other’s', width / 2+b, height / 2.3 + a);
-  text('ideas is an artist.', width / 2+b, height / 2.0 + a);
+  text('but stubborn is an artist.', width / 2+b, height / 2.3 + a);
+  // text('ideas is an artist.', width / 2+b, height / 2.0 + a);
   textSize(20);
   textStyle(ITALIC);
   text('--Artist Manifesto', width / 2+b, height / 1.8 + a);

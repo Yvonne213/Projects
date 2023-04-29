@@ -22,13 +22,13 @@ function setup() {
 }
 
 function draw() {
-//   if (frameCount === 1) {
-//     const capture = P5Capture.getInstance();
-//     capture.start({
-//       format: "gif",
-//       duration: 300,
-//     });
-//   }
+  // if (frameCount === 1) {
+  //   const capture = P5Capture.getInstance();
+  //   capture.start({
+  //     format: "gif",
+  //     duration: 300,
+  //   });
+  // }
 
   background(255,50);
   push();
@@ -81,8 +81,8 @@ let b=0;
   textAlign(CENTER, CENTER);
   push();
   textSize(45);
-  text('The person who often think', width / 2+b, height / 2.7 + a);
-  text('the exact opposite is an artist.', width / 2+b, height / 2.3 + a);
+  text('The person who steals other', width / 2+b, height / 2.7 + a);
+  text("people's ideas is an artist.", width / 2+b, height / 2.3 + a);
   // text('ideas is an artist.', width / 2+b, height / 2.0 + a);
   textSize(20);
   textStyle(ITALIC);

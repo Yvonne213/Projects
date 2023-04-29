@@ -110,7 +110,7 @@ let b=0;
   textAlign(CENTER, CENTER);
   push();
   textSize(45);
-  text('The person who often think', width / 2+b, height / 2.7 + a);
+  text('The person who often thinks', width / 2+b, height / 2.7 + a);
   text('the exact opposite is an artist.', width / 2+b, height / 2.3 + a);
   // text('ideas is an artist.', width / 2+b, height / 2.0 + a);
   textSize(20);
