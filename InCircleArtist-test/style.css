@@ -44,6 +44,7 @@
 #two {
   /* width: 0%;
   height: 100%; */
+
   text-align: center;
   margin-top: 250px;
   position: absolute;
@@ -65,7 +66,6 @@ canvas {
   display: block;
   position: absolute;
   margin-top: -10px;
-
 }
 
 body {
@@ -140,6 +140,7 @@ input[type=text] {
   height: 180px;
   background: transparent;
   color: rgba(239, 64, 64, 0.805);
+ 
 
 }
 

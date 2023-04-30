@@ -22,13 +22,13 @@ function setup() {
 }
 
 function draw() {
-  if (frameCount === 1) {
-    const capture = P5Capture.getInstance();
-    capture.start({
-      format: "gif",
-      duration: 300,
-    });
-  }
+  // if (frameCount === 1) {
+  //   const capture = P5Capture.getInstance();
+  //   capture.start({
+  //     format: "gif",
+  //     duration: 300,
+  //   });
+  // }
 
   background(255);
   push();

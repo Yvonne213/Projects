@@ -35,7 +35,7 @@ function draw() {
   //   const capture = P5Capture.getInstance();
   //   capture.start({
   //     format: "gif",
-  //     duration: 300,
+  //     duration: 600,
   //   });
   // }
 
@@ -122,8 +122,8 @@ text("Artist",circlePos.x, circlePos.y)
   textAlign(CENTER, CENTER);
   push();
   textSize(45);
-  text('The person who stands ', width / 2, height / 2.5 + 50);
-  text('in the circle is an artist.', width / 2, height / 2.1 + 50);
+  text('The person who likes to', width / 2, height / 2.5 + 50);
+  text('be alone anytime is an artist.', width / 2, height / 2.1 + 50);
   textSize(20);
   textStyle(ITALIC);
   text('--Artist Manifesto', width / 2, height / 1.8 + 50);
