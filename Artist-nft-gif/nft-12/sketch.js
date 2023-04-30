@@ -31,13 +31,13 @@ function setup() {
 
 function draw() {
 
-  //  if (frameCount === 1) {
-  //   const capture = P5Capture.getInstance();
-  //   capture.start({
-  //     format: "gif",
-  //     duration: 600,
-  //   });
-  // }
+   if (frameCount === 1) {
+    const capture = P5Capture.getInstance();
+    capture.start({
+      format: "gif",
+      duration: 600,
+    });
+  }
 
   background(255);
   push();
@@ -121,13 +121,13 @@ text("Artist",circlePos.x, circlePos.y)
 
   textAlign(CENTER, CENTER);
   push();
+  fill(0, 0, 0);
   textSize(45);
   text('The person who likes to', width / 2, height / 2.5 + 50);
   text('be alone anytime is an artist.', width / 2, height / 2.1 + 50);
   textSize(20);
   textStyle(ITALIC);
   text('--Artist Manifesto', width / 2, height / 1.8 + 50);
-  fill(0, 0, 0);
   pop();
 }
 
