@@ -86,10 +86,10 @@ function setup() {
 }
 
 function draw() {
-  if (millis() - lastClearTime >= 180000) {
-    background(255); // Clear the canvas
-    lastClearTime = millis(); // Update the last clear time
-  }
+  // if (millis() - lastClearTime >= 180000) {
+  //   background(255); // Clear the canvas
+  //   lastClearTime = millis(); // Update the last clear time
+  // }
   
   //   background(255);
   //   push();
