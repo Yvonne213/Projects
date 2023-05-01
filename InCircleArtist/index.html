@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/b0f18ca6d6.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/zno4kzf.css">
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <title>In Circle Artist</title>
@@ -59,7 +62,7 @@
   </script>
 
   <!---------connection status----------->
-  <div class="button-container">
+  <div class="button-container" style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
     <strong><small>Connection Status:</small></strong>
     <span id="connectionStatus"><small>🔴 Not connected</small></span>
 
@@ -72,13 +75,13 @@
   </div>
 
 
-  <h1 style=" margin-top: 50px;">Everyone can be an in-circle Artist</h1>
+  <h1 style=" margin-top: 50px;font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">Everyone can be an in-circle Artist</h1>
   <!-- <p style="margin-top: -20px; color:rgb(208, 208, 208);">Know more about this DApp, please check the White paper. (right top corner)</p> -->
 
   <!--prompt-->
-  <div class="prompt" style="margin-top: 0em;color:rgb(174, 0, 0)">
+  <div class="prompt" style="margin-top: 0em;color:rgb(174, 0, 0);font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
     <p>Enter Your Name and Address : </p>
-    <p style="font-size:15px; margin-top: -10px; color:rgb(255, 217, 217);">(Your wallet address showed on the top.)</p>
+    <p style="font-size:15px; margin-top: -10px; color:rgb(255, 195, 195);font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">(Your wallet address showed on the top.)</p>
     <!-- <p style="font-size:0.6em;color:rgb(255, 166, 0)">*Top circle [Name]; Bottom circle [Wallet Address] </p> -->
   </div>
   <!--....................................-->
@@ -93,10 +96,10 @@
   enter the name they want to set -->
     <div id="two">
       <div>
-        <input type="text" name="setArtistInput" id="setArtistInput" placeholder="YOUR NAME...">
+        <input style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;" type="text" name="setArtistInput" id="setArtistInput" placeholder="YOUR NAME...">
       </div>
       <div>
-        <input type="text" name="setAddressInput" id="setAddressInput" placeholder="YOUR WALLET ADDRESS...">
+        <input style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;" type="text" name="setAddressInput" id="setAddressInput" placeholder="YOUR WALLET ADDRESS...">
   
         <!--....................................-->
       </div>
@@ -104,8 +107,8 @@
       <!--....................................-->
       <br>
       <!--button-->
-      <div><button id="setArtistButton" style="margin-top:280px">Click and Enter Artists' Circle</button></div>
-      <div id="welcome">
+      <div><button id="setArtistButton" style="margin-top:280px;">Click and Enter Artists' Circle</button></div>
+      <div id="welcome" style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
         <p>Welcome to the circle! :)</p>
         <p>Now check your NFT! </p>
         <p>👇 </p>
@@ -118,12 +121,12 @@
      
       <!--form parts-->
       <div id="form">
-        <p style="margin: 30px; font-size:1.2em">Current Artists in Circle
+        <p style="margin: 30px; font-size:1.2em;font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">Current Artists in Circle
         </p>
-        <p style="margin-bottom:10px;">
+        <p style="margin-bottom:10px;font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
           <a href="https://polygonscan.com/address/0xa00fd5b581d9573aa40c2774bca4ca5bfcc67f2a">view contract</a>
         </p>
-        <div id="currentArtist">
+        <div id="currentArtist" style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
         </div>
       </div>
     </div>
@@ -136,10 +139,10 @@
       <div class="bg"></div>
       <button id="expand"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 
-      <div id="artistmode">
+      <div id="artistmode" style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
         <h1>Welcome to the circle!</h1>
         <p>Here is Artist Manifesto NFT Portal</p>
-        <i class="fa-solid fa-door-open" style="font-size:60px;color:rgb(255, 247, 247)"></i>
+        <i class="fa-solid fa-door-open" style="font-size:60px;color:rgb(255, 247, 247);"></i>
         <hr>
         <h3>Artist:</h3>
         <h3 style="font-style:normal;font-family:fangsong">
@@ -156,8 +159,7 @@
  
 
         <a href="https://testnets.opensea.io/account"
-          onClick="window.open('https://testnets.opensea.io/account','opensea','resizable,height=900,width=600'); return false;"><button>Check
-            Your NFT</button></a>
+          onClick="window.open('https://testnets.opensea.io/account','opensea','resizable,height=900,width=600'); return false;"><button>Check Your NFT</button></a>
       </div>
       
       <div id="manifesto">
