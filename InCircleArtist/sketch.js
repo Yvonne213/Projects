@@ -102,10 +102,6 @@ function draw() {
     let x = r * cos(a)
     let y = r * sin(a)
     vertex(x, y)
-    //     let r2 = map(noise(xoff,yoff,zoff),0,1,width/4,width/5)
-    //     let x2 = r2*cos(a)
-    //  let y2 = r2*sin(a)
-    //   vertex(x2,y2)
 
 
     let targetPoint = createVector(x, y)
@@ -123,24 +119,13 @@ function draw() {
   endShape(CLOSE)
   zoff += 0.01
   pop();
-//artist flowing text
-  //    push();
-  //   var x= map(noise(xoff1), 0, 1,0, width);
-  //   var y= map(noise(xoff2), 0, 1, 0, height);
-  //   xoff1 +=0.005
-  //   xoff2 +=0.005
-  //   fill("red")
-  //   strokeWeight(1)
-  //   stroke("#F8968F")
-  // textSize(20);
-  // text('Artist', x, y);
-  //   pop();
-  //
+
   if (mouseIsPressed === true) {
     noiseMax = 15
   } else {
     noiseMax = 3
   }
+
 // if (mouseIsPressed === true) {
 //   background(255);
 // }
