@@ -91,7 +91,7 @@ function draw() {
   background(255);
   push();
   translate(width / 2, height / 2)
-  stroke(250, 0, 0, 50)
+  stroke(250, 0, 0, 100)
   strokeWeight(5)
   noFill()
   beginShape()
