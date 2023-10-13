@@ -30,11 +30,11 @@ function preload() {
 }
 
 function setup() {
-alert(
- "NOTIFICATION CENTER                                                                        Hey！You've got a message.");
-alert("Sorry, not 'a'message but 'several' messages are waiting you.");
-alert("Oh!  It's going to crash now!  Check it quickly!");
-alert("Please mute your phone if you find it annoying!");
+// alert(
+//  "NOTIFICATION CENTER                                                                        Hey！You've got a message.");
+// alert("Sorry, not 'a'message but 'several' messages are waiting you.");
+// alert("Oh!  It's going to crash now!  Check it quickly!");
+// alert("Please mute your phone if you find it annoying!");
 
   createCanvas(770, 790);
   let rand = random(5, 15);
