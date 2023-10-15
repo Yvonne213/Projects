@@ -36,7 +36,7 @@ function setup() {
 // alert("Oh!  It's going to crash now!  Check it quickly!");
 // alert("Please mute your phone if you find it annoying!");
 
-  createCanvas(770, 790);
+  createCanvas(1024, 1366);//770 790
   let rand = random(5, 15);
   let x = random(width);
   let y = random(height);
@@ -52,11 +52,12 @@ function setup() {
 function draw() {
   // R=random(255);
   // B=random(255);
-  r = map(mouseX, 0, 770, 0, 255);
-  b = map(mouseY, 0, 800, 255, 0);
-  g = map(mouseX, 50, 400, 5, 80);
 
-  background(r, g, b, 80);
+  //background
+  // r = map(mouseX, 0, 1024, 0, 255);
+  // b = map(mouseY, 0, 1366, 255, 0);
+  // g = map(mouseX, 100, 500, 5, 80);
+  // background(r, g, b, 80);
 
   createRect();
 
@@ -193,33 +194,34 @@ function Notification(x, y, r, alpha) {
   };
 }
 
+
 function createRect() {
   let b = round(random(255));
-
   push();
 
   // image(extraCanvas,0,0);
   // extraCanvas.fill(0,150);
   // extraCanvas.strokeWeight(4);
   // extraCanvas.rect(20,50,30,30,4);
-  
-    textSize(10);
+  textAlign(CENTER);
+    textSize(20);
     fill(0);
-  text("©️Yvonne", 710, 40);
-  
+  text("©️Yvonne", innerWidth/2, innerHeight-30);
   fill(0);
-    textSize(15);
-   text("ATS", 720, 30);
+    textSize(20);
+   text("ATS", innerWidth-80, 50);
   fill(255, 0, b);
-  textSize(15);
-  text(' Error!  Storage is being full!' , 18, 30);
+  textSize(20);
+  text(' Error!  Storage is being full!' , 200, 50);
 
-  for (var i = 0; i < 15; i++) {
-    for (var j = 0; j < 15; j++) {
+
+  //rect
+  for (var i = 0; i < 17; i+=2) {
+    for (var j = 0; j < 23; j+=2) {
       fill(0, 80);
       stroke(0);
       strokeWeight(1);
-      rect(20 + 50 * i, 48 + 50 * j, 30, 30, 9);
+      rect(80+ 50 * i, 130 + 50 * j, 60, 60, 15);
     }
   }
 
