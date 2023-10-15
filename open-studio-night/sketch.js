@@ -4,23 +4,22 @@ let timer;
 let minTime = 200;
 //maximum time limit
 let maxTime = 500;
+
 let notify = true;
 let w = 0;
 let y = 0;
 let alpha = 0;
 //let extraCanvas;
-var r;
-var b;
-var g;
-let R;
-let B;
+
+
+
 var song;
 var song1;
 var song2;
 var song3;
 
 
-
+//preload sound effect
 function preload() {
   song = loadSound("8407.mp3");
   song1=loadSound("2221.mp3");
@@ -30,12 +29,6 @@ function preload() {
 }
 
 function setup() {
-// alert(
-//  "NOTIFICATION CENTER                                                                        Hey！You've got a message.");
-// alert("Sorry, not 'a'message but 'several' messages are waiting you.");
-// alert("Oh!  It's going to crash now!  Check it quickly!");
-// alert("Please mute your phone if you find it annoying!");
-
   createCanvas(1024, 1366);//770 790
   let rand = random(5, 15);
   let x = random(width);
@@ -43,31 +36,19 @@ function setup() {
   timer = random(minTime, maxTime);
   noStroke();
   print(timer);
-  //extraCanvas= createGraphics(800,800);
-  //extraCanvas.background(255,255,255);
-  // extraCanvas.clear;
- 
 }
 
 function draw() {
-  // R=random(255);
-  // B=random(255);
-
-  //background
-  // r = map(mouseX, 0, 1024, 0, 255);
-  // b = map(mouseY, 0, 1366, 255, 0);
-  // g = map(mouseX, 100, 500, 5, 80);
-  // background(r, g, b, 80);
-
-  createRect();
+  background(255); // Clear the canvas
 
   let m = millis();
-
   //this is the random timer that triggers a new notification
   if (m > timer) {
     timer = timer + random(minTime, maxTime);
     createNotification();
   }
+
+  createRect();
 
   //this displays the notifications
   for (let i = 0; i < notifications.length; i++) {
@@ -77,107 +58,42 @@ function draw() {
 
 function createNotification() {
   let a = random(0, 10);
-  //this sets a random alpha trasparency
+  // this sets a random alpha transparency
   if (a < 4) {
     alpha = 255;
     song.play();
   } else {
     alpha = 0;
   }
-  //this is where we are creating a new notification
-
-  let i = round(random(0, 16));
-  notifications.push(new Notification(50 + w, 50 + y, 15, alpha));
-  if (50 + w < width) {
-    w = w + 50;
-  } else {
-    w = 0;
-    // y = y + 50
-  }
-  if (50 + y < height) {
-    y = y + 50 * i;
-  } else {
-    y = 0;
-  }
+  // this is where we are creating a new notification
+  let i = round(random(0, 8)) * 2; // aligning with the grid pattern of rectangles
+  let j = round(random(0, 11)) * 2; // aligning with the grid pattern of rectangles
+  notifications.push(new Notification(138 + 50 * i, 132 + 50 * j, 20, alpha));
 }
 
 function mousePressed() {
-  // let a=200;
-  //let b=200;
-  let w = random(0, 197.5);
-  let w1 = random(197.5, 394);
-  let w2 = random(394, 591.5);
-  let w3 = random(591.5, 790);
-
-
-  //this is how we delete a notification when we click on it
+  // Iterate through notifications and flag the ones to be removed
   for (let i = 0; i < notifications.length; i++) {
     if (notifications[i].del(mouseX, mouseY)) {
+      notifications[i].toRemove = true;
+    }
+  }
+
+  // Remove notifications flagged for removal
+  for (let i = notifications.length - 1; i >= 0; i--) {
+    if (notifications[i].toRemove) {
       notifications.splice(i, 1);
     }
   }
-
-  if (mouseX < 95 && mouseX > 0 && mouseY < 800 && mouseY > 730) {
-    if (mouseIsPressed) {
-      song1.play();
-      alert("Messege from Yvonne : Now You've found me! Thank you for your participation and let us have a break now.");
-      
-    }
-  }
-  
-  if (mouseX < w3 && mouseX > w2 && mouseY < w3 && mouseY > w2) {
-    if (mouseIsPressed) {
-    
-     song2.play();
-      alert("Sorry, it's not here!  Please check again!");
-  
-    }
-  }
-  
-  if (mouseX > w && mouseX < w1 && mouseY > w2 && mouseY < w3) {
-    if (mouseIsPressed) {
-      song3.play();
-      alert("おっとー勉強の時間だ、ちっちと始めよう！");
-    }
-  }
-  
-    if (mouseX > w1 && mouseX < w2 && mouseY > w1 && mouseY < w2) {
-      if (mouseIsPressed) {
-        alert("天猫：双十一，百万大奖等你拿！");
-      }
-    }
-  
-    if (mouseX < w && mouseY > w && mouseY < w1) {
-      if (mouseIsPressed) {
-  alert("Only spend 1 dollar，and you can get iphone13!");
-      }
-    }
-  
-    if (mouseX > w2 && mouseX < w3 && mouseY > w && mouseY < w1) {
-      if (mouseIsPressed) {
-        alert("lol, You can't find me!");
-      }
-    }
-  
-      if (mouseX > w && mouseX < w1 && mouseY < w) {
-        if (mouseIsPressed) {
-          alert("Notice! You do have a real message.");
-        }
-      }
-  
-      if (mouseX < w && mouseY < w) {
-        if (mouseIsPressed) {
-          alert("Sorry! Just some advertisetments.");
-        }
-      }
-  
 }
+
 
 function Notification(x, y, r, alpha) {
   this.x = x;
   this.y = y;
   this.r = r;
   this.a = alpha;
+  this.toRemove = false; // Flag to indicate whether the notification should be removed
 
   this.display = function () {
     fill(255, 0, 0, this.a);
@@ -186,32 +102,25 @@ function Notification(x, y, r, alpha) {
 
   this.del = function (mx, my) {
     let d = dist(mx, my, this.x, this.y);
-    if (d < this.r) {
-      return true;
-    } else {
-      return false;
-    }
+    return d < this.r;
   };
 }
+
 
 
 function createRect() {
   let b = round(random(255));
   push();
 
-  // image(extraCanvas,0,0);
-  // extraCanvas.fill(0,150);
-  // extraCanvas.strokeWeight(4);
-  // extraCanvas.rect(20,50,30,30,4);
   textAlign(CENTER);
     textSize(20);
     fill(0);
-  text("©️Yvonne", innerWidth/2, innerHeight-30);
+  text("©️Yvonne", width/2, height-30);
   fill(0);
     textSize(20);
-   text("ATS", innerWidth-80, 50);
+   text("ATS", width-80, 50);
   fill(255, 0, b);
-  textSize(20);
+  textSize(80);
   text(' Error!  Storage is being full!' , 200, 50);
 
 
@@ -224,6 +133,5 @@ function createRect() {
       rect(80+ 50 * i, 130 + 50 * j, 60, 60, 15);
     }
   }
-
   pop();
 }
