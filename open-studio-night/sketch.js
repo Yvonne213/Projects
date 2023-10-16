@@ -157,19 +157,19 @@ function createRect() {
   fill(0, 80);
   textSize(20);
   text("///////AT/SP", width - 80, 50);
-  fill(255, b, b);
-  textSize(65);
-  // text("Storage Almost full!", 500, 100);
+  fill(255,b,b);
+  textSize(75);
+  text("Storage Almost full!", 350, 80);
 
   // words colum
   let s = 20;
   let p = 50;
   let rr=120
-  const scream = "Storage Almost full!";
-  textSize(80);
+  const scream = "WIPE OUT RED DOTS";
+  textSize(65);
   textWrap(WORD);
-  text(scream, -120 - s, 60 - p, 1000);
-  fill(0, 0, 0, 75);
+  // text(scream, -120 - s, 60 - p, 1000);
+  // fill(0, 0, 0, 75);
   // text(scream, -80-s, 100-p,1000)
   // fill(0, 0, 0, 60);
   // text(scream, -40-s, 150-p, 1000);
