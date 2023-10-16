@@ -159,7 +159,7 @@ function createRect() {
   text("///////AT/SP", width - 80, 50);
   fill(255,b,b);
   textSize(75);
-  text("Storage Almost full!", 350, 80);
+  text("Storage Almost full!", 360, 80);
 
   // words colum
   let s = 20;
