@@ -30,10 +30,6 @@ function setup() {
 
 function draw() {
   // background(255); // Clear the canvas
-  // let r = map(mouseX, 0, width, 0, 255);
-  // let g = map(mouseY, 0, height, 0, 255);
-  // let b = map(mouseX, width, 0, 0, 255);
-  // background(r, g, b);
 
   // Set background with a flowing water effect using Perlin noise
   //255,r,100
