@@ -74,6 +74,23 @@ function draw() {
 }
 
 
+function reinitializeSketch() {
+  notifications = [];
+  timer = random(minTime, maxTime);
+  xOffset = 0;
+  yOffset = 1000;
+  frameCounter = 0;
+  song.stop();
+}
+
+let intervalID = setInterval(reinitializeSketch, 180000);
+
+document.addEventListener('click', function() {
+  clearInterval(intervalID);
+  intervalID = setInterval(reinitializeSketch, 180000);
+});
+
+
 function createNotification() {
   let a = random(0, 10);
   // this sets a random alpha transparency
