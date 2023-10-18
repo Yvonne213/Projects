@@ -121,7 +121,13 @@ function mousePressed() {
   for (let i = notifications.length - 1; i >= 0; i--) {
     if (notifications[i].toRemove) {
       notifications.splice(i, 1);
-      if (random(1) > 0.5) {
+
+      // if (random(1) > 0.5) {
+      let minProbability = 0.4; // Minimum probability
+      let maxProbability = 0.6; // Maximum probability
+      let randomProbability = Math.random(); // Random number between 0 and 1
+      // Trigger the alert only if the random number is within the specified range
+      if (randomProbability >= minProbability && randomProbability <= maxProbability) {
         createRandomAlert();
       }
     }
