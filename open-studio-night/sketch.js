@@ -73,7 +73,7 @@ function draw() {
   }
 }
 
-
+/////reintialize the sketch every 3 minutes without refreshing the page
 function reinitializeSketch() {
   notifications = [];
   timer = random(minTime, maxTime);
