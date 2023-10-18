@@ -17,7 +17,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1024, 1366); //770 790
+  createCanvas(770, 790); //770 790
   let rand = random(5, 15);
   let x = random(width);
   let y = random(height);
