@@ -1,12 +1,39 @@
 <!DOCTYPE html><html lang="en"><head>
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
 
+    <title>Wipe out red dots</title>
   </head>
   <body>
     <script src="sketch.js"></script>
   
 
+    <script type="text/javascript">
+      // Set the time (in milliseconds) after which the page will refresh due to inactivity
+      var inactivityTimeout = 5 * 60 * 1000; // 5 minutes in milliseconds
+  
+      var resetTimer = function() {
+          // Reset the timer whenever there is user interaction
+          clearTimeout(refreshTimer);
+          refreshTimer = setTimeout(refreshPage, inactivityTimeout);
+      };
+  
+      var refreshPage = function() {
+          // Refresh the page after the specified inactivity timeout
+          location.reload();
+      };
+  
+      // Add event listeners for various user interactions
+      window.onload = resetTimer; // Page load counts as user interaction
+      document.onmousemove = resetTimer; // Mouse movement
+      document.onkeypress = resetTimer; // Keyboard key press
+  
+      // Initial setup of the timer
+      var refreshTimer = setTimeout(refreshPage, inactivityTimeout);
+  
+  </script>
+  
 </body></html>
