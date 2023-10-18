@@ -79,7 +79,7 @@ function reinitializeSketch() {
   timer = random(minTime, maxTime);
   xOffset = 0;
   yOffset = 1000;
-  frameCounter = 0;
+  frameCounter = 0; 
   song.stop();
 }
 
@@ -134,10 +134,10 @@ function createRandomAlert() {
     "Only spend 1 dollar, get iphone15!",
     "おっとー勉強の時間だ、ちっちと始めよう！",
     "Sender:Yuwen\nMessage Preview:\nHi there!\nTake your time, enjoy the notifications!",
-    "Event: Open Studio Night.\nTime: Oct 21-22\nLocation: Sullivan Building 1415",
+    "Event: Open Studio Night.\nTime: Oct 21-22\nLocation: Sullivan center 1415",
     "Reminder Text: Yuwen's studio is in Lakeview 1116.\nCheck it out!",
     "Greetings from Yvonne:\nIsn't it annoying?",
-    "Sender:yhuang45@saic.edu\nSubject Line:Welcome to RED. exhibition",
+    "Sender:yhuang45@saic.edu\nSubject Line: Welcome to RED. exhibition",
     "Breaking News: Earthquake reported in neighboring city. Follow for updates.",
     "Reminder: Artist Statement and Bio due tomorrow.",
     "Today's Forecast: Sunny with a high of 75°F. Perfect day to spend outdoors!",
