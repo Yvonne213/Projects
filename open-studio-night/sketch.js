@@ -6,9 +6,8 @@ let minTime = 200;
 let maxTime = 500;
 let notify = true;
 let alpha = 0;
-//let extraCanvas;
-let xOffset = 0;
-let yOffset = 1000;
+let xOffset = 0.0;
+let yOffset = 1000.0;
 
 var song;
 
@@ -22,6 +21,7 @@ function setup() {
   let rand = random(5, 15);
   let x = random(width);
   let y = random(height);
+  yOffset = height*0.8;
   timer = random(minTime, maxTime);
   noStroke();
   print(timer);
@@ -37,7 +37,7 @@ function draw() {
   for (let x = 0; x < width; x++) {
     for (let y = 0; y < height; y++) {
       let index = (x + y * width) * 4;
-      let r = noise(x * 0.01 + xOffset, y * 0.01 + yOffset) * 255;
+      let r = noise(x * 0.01 , y * 0.01 + width) * 255;
       pixels[index] = 255; // Red channel
       pixels[index + 1] = r; //Green channel
       pixels[index + 2] = 100; //Blue
