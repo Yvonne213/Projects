@@ -32,7 +32,7 @@ function setup() {
   // Sets the pixel density to 1
   pixelDensity(1);
   print(density);
-  
+  song.play();
 }
 
 
@@ -75,12 +75,13 @@ function draw() {
 
 /////reintialize the sketch every 3 minutes without refreshing the page
 function reinitializeSketch() {
+  song.stop();
   notifications = [];
   timer = random(minTime, maxTime);
   xOffset = 0;
   yOffset = 1000;
   frameCounter = 0; 
-  song.stop();
+  song.play();
 }
 
 let intervalID = setInterval(reinitializeSketch, 60000);
