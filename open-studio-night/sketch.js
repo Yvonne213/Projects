@@ -178,7 +178,7 @@ function createRect() {
 
   fill(0, 80);
   textSize(20);
-  text("///////AT/SP", width - 80, 50);
+  text("///////AT/SP", width - 80, 90);
 
  // Generate random x and y coordinates for the text every 60 frames (1 second at 60 frames per second)
   if (frameCounter % 60 === 0) {
