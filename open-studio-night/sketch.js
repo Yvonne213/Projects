@@ -10,6 +10,7 @@ let alpha = 0;
 let xOffset = 0;
 let yOffset = 1000;
 
+let frameCounter = 0; //text speed to show up
 var song;
 
 //preload sound effect
@@ -160,9 +161,22 @@ function createRect() {
   fill(0, 80);
   textSize(20);
   text("///////AT/SP", width - 80, 50);
+
+ // Generate random x and y coordinates for the text every 60 frames (1 second at 60 frames per second)
+  if (frameCounter % 60 === 0) {
+    let x = random(width);
+    let y = random(height);
+  textAlign(CENTER, CENTER);
+  // Randomly colored text
   fill(255,b,b);
   textSize(75);
-  text("Storage Almost full!", 360, 80);
+  text("Storage Almost full!",x,y);
+  }
+  
+  // fill(255,b,b);
+  // textSize(75);
+  // text("Storage Almost full!", 360, 80);
+
 
   // words colum
   let s = 20;
@@ -208,4 +222,6 @@ function createRect() {
     }
   }
   pop();
+
+  
 }
