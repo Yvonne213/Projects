@@ -74,22 +74,22 @@ function draw() {
 }
 
 /////reintialize the sketch every 3 minutes without refreshing the page
-function reinitializeSketch() {
-  song.stop();
-  notifications = [];
-  timer = random(minTime, maxTime);
-  xOffset = 0;
-  yOffset = 1000;
-  frameCounter = 0; 
-  song.play();
-}
+// function reinitializeSketch() {
+//   song.stop();
+//   notifications = [];
+//   timer = random(minTime, maxTime);
+//   xOffset = 0;
+//   yOffset = 1000;
+//   frameCounter = 0; 
+//   song.play();
+// }
 
-let intervalID = setInterval(reinitializeSketch, 60000);
+// let intervalID = setInterval(reinitializeSketch, 60000);
 
-document.addEventListener('click', function() {
-  clearInterval(intervalID);
-  intervalID = setInterval(reinitializeSketch, 60000);
-});
+// document.addEventListener('click', function() {
+//   clearInterval(intervalID);
+//   intervalID = setInterval(reinitializeSketch, 60000);
+// });
 
 
 function createNotification() {
