@@ -83,11 +83,11 @@ function reinitializeSketch() {
   song.stop();
 }
 
-let intervalID = setInterval(reinitializeSketch, 180000);
+let intervalID = setInterval(reinitializeSketch, 60000);
 
 document.addEventListener('click', function() {
   clearInterval(intervalID);
-  intervalID = setInterval(reinitializeSketch, 180000);
+  intervalID = setInterval(reinitializeSketch, 60000);
 });
 
 
