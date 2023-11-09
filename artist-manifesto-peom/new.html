@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Content</title>
+  <style>
+    .custom-style {
+        font-family: 'C64', monospace;
+      background-color: #060606;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-style" id="content"></div>
+
+  <script>
+    // Retrieve the content from the query parameter
+    const content = decodeURIComponent(new URLSearchParams(window.location.search).get('content'));
+
+    // Display the content in the designated element
+    document.getElementById('content').innerHTML = content;
+  </script>
+</body>
+</html>

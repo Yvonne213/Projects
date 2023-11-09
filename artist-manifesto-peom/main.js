@@ -1,3 +1,5 @@
+let generatedWindow; // Variable to store the reference to the opened window
+
 let verbs = ["creates", "steals", "plants", "circles", "plays", "draws", "chases", "watched", "holds", "micmics"];
 let nouns = ["circles", "triangles", "brushes", "plants", "human", "animals", "a bird", "soul", "the world", "an apple"];
 let times = [
@@ -61,6 +63,13 @@ function generateUserSentence() {
       historyList.appendChild(listItem);
     });
   }
+  // Generate the sentence
+  const generatedSentence = `${line1}\n${line2}\n${line3}\n${line4}`;
+
+ 
+  // Open the new window and set its location to new.html with the generated content as a query parameter
+  const newWindow = window.open(`new.html?content=${encodeURIComponent(generatedSentence)}`, '_blank');
+
 }
 
 // Function to generate a random sentence
@@ -75,6 +84,13 @@ function generateRandomSentence() {
   const line4 = `is an artist`;
 
   const generatedSentence = `${line1}\n${line2}\n${line3}\n${line4}`;
+  // If the window is already opened, refresh its content; otherwise, open a new window
+  if (generatedWindow && !generatedWindow.closed) {
+    generatedWindow.document.body.textContent = generatedSentence;
+  } else {
+    generatedWindow = window.open('', '_blank');
+    generatedWindow.document.body.textContent = generatedSentence;
+  }
 
   // Add the generated sentence to the history
   sentenceHistory.push(generatedSentence);
@@ -99,6 +115,9 @@ function generateRandomSentence() {
 
     historyList.appendChild(listItem);
   });
+  
+
+  
 }
 
 // Add click event listener to the "Display Sentence" button
