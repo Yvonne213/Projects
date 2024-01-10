@@ -83,7 +83,7 @@ h1{
   .label {
     position: static; /* Change to static positioning on smaller screens */
     text-align: center; /* Center-align the text */
-    margin-top: 10px; /* Adjust margin as needed */
+   
     min-width: 100vh;
   }
 }
@@ -138,7 +138,8 @@ h1{
     /* width: 0%;
     height: 100%; */
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: -20px;
     position: absolute;
     width: 880px;
   }
