@@ -79,7 +79,7 @@ h1{
   text-align: right;
 
 }
-@media (max-width: 844px) {
+@media (max-width: 768px) {
   .label {
     position: static; /* Change to static positioning on smaller screens */
     text-align: center; /* Center-align the text */
@@ -133,7 +133,7 @@ h1{
   position: absolute;
   width: 880px;
 }
-@media (max-width: 844px) {
+@media (max-width: 768px) {
   #two {
     /* width: 0%;
     height: 100%; */
