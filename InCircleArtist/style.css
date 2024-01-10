@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+h1{
+  margin-top: 50px;font-family:poppins, sans-serif;font-weight: 300; font-style: normal;
+}
+.prompt {
+  font-size: 1.3em;
+  margin-top: 0em;color:rgb(174, 0, 0);font-family:poppins, sans-serif;font-weight: 300; font-style: normal;
+}
+.tips{
+  font-size:15px; margin-top: -10px; color:rgb(255, 195, 195);font-family:poppins, sans-serif;font-weight: 300; font-style: normal;
+}
+
 .label {
   position: absolute;
   right: 50px;
