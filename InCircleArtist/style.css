@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+a {
+  color: blue; /* Default color */
+  text-decoration: none; /* Remove underlines by default, but you can customize this */
+}
+
+a:visited {
+  color: red; /* Color after the link has been visited */
+}
+
+a:hover {
+  color: rgb(0, 0, 0); /* Color when hovering over the link */
+}
+
+a:active {
+  color: purple; /* Color when the link is being clicked */
+}
+
+
 h1{
   margin-top: 50px;font-family:poppins, sans-serif;font-weight: 300; font-style: normal;
 }
