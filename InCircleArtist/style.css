@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
 .button-container {
   display: flex;
   flex-wrap: wrap;
@@ -191,7 +189,14 @@ canvas {
   position: absolute;
 }
 /*↑↑↑form*/
-
+@media (max-width: 768px) {
+  #form {
+    width: 100%;
+    /* height: 30%; */
+    margin-top: 50px;
+    position: absolute;
+  }
+}
 
 .button-container button {
   padding: 0.5em;
