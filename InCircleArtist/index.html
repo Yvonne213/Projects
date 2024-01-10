@@ -36,6 +36,21 @@
 </head>
 
 <body>
+ 
+  <!---------connection status----------->
+  <div class="button-container" style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
+    <strong><small>Connection Status:</small></strong>
+    <span id="connectionStatus"><small>🔴 Not connected</small></span>
+
+    <strong><small>Your Connected Wallet <ins>(Polygon Mainnet)</ins>:</small></strong>
+    <span id="connectedWallet"><small>[No wallet connected]</small></span>
+    <small>👉</small>
+
+    <button id="connectButton">Connect</button>
+    <span id="loadingIconConnect" class="loading-icon"></span>
+  </div>
+    <!--↑↑↑--connection status↑↑↑------>
+
   <div class="label">
 
     <a href="https://yvonne213.github.io/Projects/InCircleArtist/Instruction.pdf"
@@ -54,25 +69,7 @@
     </div>
   </div>
 
-
-
-
-  </script>
-
-  <!---------connection status----------->
-  <div class="button-container" style="font-family:poppins, sans-serif;font-weight: 300; font-style: normal;">
-    <strong><small>Connection Status:</small></strong>
-    <span id="connectionStatus"><small>🔴 Not connected</small></span>
-
-    <strong><small>Your Connected Wallet <ins>(Polygon Mainnet)</ins>:</small></strong>
-    <span id="connectedWallet"><small>[No wallet connected]</small></span>
-    <small>👉</small>
-
-    <button id="connectButton">Connect</button>
-    <span id="loadingIconConnect" class="loading-icon"></span>
-  </div>
-
-
+ <!---------main part----------->
   <h1>Anyone can be an in-circle Artist</h1>
   <!-- <p style="margin-top: -20px; color:rgb(208, 208, 208);">Know more about this DApp, please check the White paper. (right top corner)</p> -->
 

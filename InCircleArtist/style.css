@@ -79,6 +79,14 @@ h1{
   text-align: right;
 
 }
+@media (max-width: 768px) {
+  .label {
+    position: static; /* Change to static positioning on smaller screens */
+    text-align: center; /* Center-align the text */
+    margin-top: 10px; /* Adjust margin as needed */
+    min-width: 100vh;
+  }
+}
 
 .hide {
   display: none;
