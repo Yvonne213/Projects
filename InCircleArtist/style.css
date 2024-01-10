@@ -79,7 +79,7 @@ h1{
   text-align: right;
 
 }
-@media (max-width: 768px) {
+@media (max-width: 844px) {
   .label {
     position: static; /* Change to static positioning on smaller screens */
     text-align: center; /* Center-align the text */
@@ -122,6 +122,7 @@ h1{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+ margin-top: -13em;
 }
 
 #two {
@@ -132,6 +133,17 @@ h1{
   position: absolute;
   width: 880px;
 }
+@media (max-width: 844px) {
+  #two {
+    /* width: 0%;
+    height: 100%; */
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    width: 880px;
+  }
+}
+
 
 canvas {
   display: block;
